@@ -105,5 +105,12 @@
   },
   "cli": {
     "analytics": "67f21044-49bb-4cad-8541-48432409d12e"
-  }
+  },
+  "fileReplacements": [
+	{
+		"replace": "src/environments/environment.ts",
+		"with": "src/environments/environment.development.ts"
+	}
+]
+  
 }

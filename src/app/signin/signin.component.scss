@@ -1,0 +1,78 @@
+/* Full Page Styling */
+.full-page {
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #eefff9 0%, #ffccc1 49%, #dcdbff 100%);
+}
+
+.box {
+  width: 100%;
+  max-width: 500px; /* Set the max width of the box */
+  padding: 40px; /* Add padding */
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  border-radius: 15px; /* Add rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  text-align: left; /* Align text to the left for better readability */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.input-container {
+  display: flex; /* Make input and button inline */
+  flex-direction: column; /* Stack inputs vertically */
+  gap: 15px; /* Space between input and button */
+  margin-bottom: 10px;
+}
+
+input.form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
+button.add-btn {
+  background-color: #ff6666;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+button.add-btn svg {
+  fill: #fff; /* Change to white for better contrast */
+  margin-right: 10px;
+}
+
+button.add-btn:hover {
+  background-color: #ff4d4d;
+}
+
+p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+p a {
+  color: #ff6666;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}

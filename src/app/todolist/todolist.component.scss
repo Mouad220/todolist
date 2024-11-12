@@ -1,0 +1,106 @@
+.full-page {
+    height: 100vh; // Full viewport height
+    display: flex; // Use flexbox for centering
+    justify-content: center; // Center horizontally
+    align-items: center; // Center vertically
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #eefff9 0%, #ffccc1 49%, #dcdbff 100%);
+  
+    .box {
+      width: 100%;
+      max-width: 500px; // Set the max width of the box
+      padding: 40px; // Add padding
+      background-color: rgba(255, 255, 255, 0.9); // Slightly transparent white
+      border-radius: 15px; // Add rounded corners
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Add a subtle box shadow
+      text-align: left; // Align text to the left for better readability
+    }
+  
+    .input-container {
+      display: flex; // Make input and button inline
+      gap: 10px; // Space between input and button
+      margin-bottom: 10px;
+    }
+  
+    input.form-control {
+      flex-grow: 1; // Make the input take up remaining space
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+  
+    button.add-btn {
+      background-color: #ff6666;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      svg {
+        fill: #fff; // Change to white for better contrast
+      }
+  
+      &:hover {
+        background-color: #ff4d4d;
+      }
+    }
+  
+    .task-list {
+      list-style-type: none;
+      padding-left: 0;
+  
+      li {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); // Make it more pronounced
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease; // Add a smooth animation
+  
+        &:hover {
+          transform: scale(1.02); // Slightly enlarge on hover
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); // Add a larger shadow on hover
+        }
+  
+        .delete-btn {
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          padding: 5px; // Add some padding for better click area
+  
+          svg {
+            fill: #00050b;
+            transition: fill 0.2s ease;
+          }
+  
+          &:hover {
+            svg {
+              fill: #ff3b3b; // Change to red on hover
+            }
+          }
+        }
+  
+        .completed {
+          text-decoration: line-through;
+          color: #ff3b3b;
+        }
+  
+        .checkbox-container {
+          transform: scale(2); // Increase checkbox size
+          accent-color:  #ff6666; // Change the checkbox color to pink
+          margin-right: 10px; // Add spacing between checkbox and text
+        }
+      }
+    }
+  }
+  

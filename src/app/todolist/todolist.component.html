@@ -1,0 +1,33 @@
+<section class="body-font text-center full-page flex justify-center items-center">
+  <form>
+    <div class="container px-5 py-24 mx-auto">
+      <div class="box container p-5 mx-auto">
+        <h2 class="text-gray-900 text-lg font-medium title-font mb-5">My To-Do List</h2>
+
+        <div class="input-container flex">
+          <input #myitem type="text" class="form-control" placeholder="New Task" />
+          <button class="add-btn" type="button" (click)="addItem(myitem)" aria-label="Add task">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="M440-280h80v-160h160v-80H520v-160h-80v160H280v80h160v160Zm40 200q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/>
+            </svg>
+          </button>
+        </div>
+
+      <ul class="task-list">
+          <li *ngFor="let item of addItemList; let i = index" class="flex justify-between items-center my-2">
+            <div class="flex items-center">
+              <input id="cheakedBox{{i}}" class="checkbox-container" type="checkbox" [checked]="item.isCompleted" (change)="cheakedBox(item, $event)">
+              <span>{{ item.newItem }}</span>
+            </div>
+            
+            <button type="button" class="delete-btn" (click)="deleteItem(item.id)" aria-label="Delete task">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </form>
+</section>
